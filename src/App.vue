@@ -1,7 +1,17 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <v-app>
+      <v-navigation-drawer app></v-navigation-drawer>
+      <v-toolbar app></v-toolbar>
+      <main>
+        <v-content>
+          <v-container fluid>
+            <router-view></router-view>
+          </v-container>
+        </v-content>
+      </main>
+      <v-footer app></v-footer>
+    </v-app>
   </div>
 </template>
 
@@ -12,6 +22,7 @@ export default {
 </script>
 
 <style>
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

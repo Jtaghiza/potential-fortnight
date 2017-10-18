@@ -1,25 +1,9 @@
 <template>
   <div id="app">
-  <span v-bind:title="msg">
-    Hover your mouse over me for a few seconds
-    to see my dynamically bound title!
-  </span>
-  <span v-bind:title="msg"></span>
-
-
-  <ul>
-    <li>
-      hi
-    </li>
-    <li>
-      hi2/
-    </li>
-    <li>
-      hi3
-    </li>
-</ul>
-</div>
-
+    <div v-cloak>
+      {{msg}}
+    </div>
+  </div>
 </template>
 
 <script>
@@ -50,8 +34,9 @@ ul {
     margin: 0 10px;
   }
 }
-
-
+[v-cloak] {
+  display: none;
+}
 
 a {
   color: #42b983;
